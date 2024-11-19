@@ -1,8 +1,6 @@
 from colorama import Fore, Style, init
 
-
 init(autoreset=True)
-
 
 # here bmi calculation will done
 def calculate_bmi(weight, height):
@@ -11,21 +9,21 @@ def calculate_bmi(weight, height):
 # the main function
 def main():
 
-
-    print(Fore.CYAN + "Welcome to BMI Calculator!")
+    print(Fore.CYAN + "\n\n\nWelcome to BMI Calculator!")
 
     # this will get the system (metric or imperial)
-    system = input(Fore.YELLOW + "Your System: metric (m) or imperial (i): ")
+    system = input(Fore.YELLOW + "Choose Your System: metric (m) or imperial (i): ")
 
     # this if condition will check that which system it is
     if(system.lower() == "m"):
-        weight = int(input(Fore.GREEN + "Your Weight in kilogram: "))
-        height = int(input(Fore.GREEN + "Your Height in centimeters: "))
+        weight = int(input(Fore.GREEN + "\nWrite Your Weight in kilogram: "))
+        height = int(input(Fore.GREEN + "Write Your Height in centimeters: "))
     elif(system == "i"):
-        weight = int(input(Fore.GREEN + "Your Weight in pounds: ")) / 2.20462
-        height = int(input(Fore.GREEN + "Your Height in inches: ")) / 39.3701
+        weight = int(input(Fore.GREEN + "\nWrite Your Weight in pounds: ")) / 2.20462
+        height = int(input(Fore.GREEN + "Write Your Height in inches: ")) / 39.3701
     else:
-        print(Fore.RED + "Try again.")
+        print(Fore.WHITE + "\n(m) for metric, (i) for imperial")
+        print(Fore.RED + "Invalid Input, Try again.\n")
 
         # re agin the function
         return main()
@@ -47,7 +45,7 @@ def main():
         print(Fore.RED + f"Obesity, your bmi is {bmi}")
         
     # final message
-    print(Style.BRIGHT + Fore.CYAN + "Thank you for using the BMI calculator!")
+    print(Style.BRIGHT + Fore.CYAN + "\nThank you for using the BMI calculator!")
     
 
 # running the main loop to begin the mini app
