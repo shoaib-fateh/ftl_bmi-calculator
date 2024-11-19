@@ -3,8 +3,19 @@ def calculate_bmi(weight, height):
     return weight / ((height / 100) ** 2)
 
 def main():
-    weight = int(input("Your Weight: "))
-    height = int(input("Your Height: "))
+
+    system = input("Your System: metric (m) or imperial (i): ")
+
+    if(system == "m"):
+        weight = int(input("Your Weight in kilogram: "))
+        height = int(input("Your Height in centimeters: "))
+    elif(system == "i"):
+        weight = int(input("Your Weight in pounds: ")) / 2.20462
+        height = int(input("Your Height in inches: ")) / 39.3701
+    else:
+        print("Try again.")
+        return main()
+        
 
     bmi = calculate_bmi(weight, height)
 
