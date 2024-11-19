@@ -9,7 +9,7 @@ def calculate_bmi(weight, height):
 # the main function
 def main():
 
-    print(Fore.CYAN + "\n\n\nWelcome to BMI Calculator!")
+    print(Fore.CYAN + "\nWelcome to BMI Calculator!")
 
     # this will get the system (metric or imperial)
     system = input(Fore.YELLOW + "Choose Your System: metric (m) or imperial (i): ")
