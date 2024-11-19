@@ -12,7 +12,7 @@ def main():
     system = input("Your System: metric (m) or imperial (i): ")
 
     # this if condition will check that which system it is
-    if(system == "m"):
+    if(system.lower() == "m"):
         weight = int(input("Your Weight in kilogram: "))
         height = int(input("Your Height in centimeters: "))
     elif(system == "i"):
@@ -26,7 +26,7 @@ def main():
         
 
     # here it will do calculation and then store it in bmi varible
-    bmi = calculate_bmi(weight, height)
+    bmi = round(calculate_bmi(weight, height), 2)
 
     # here it will check the bmi and print it out
     if(bmi < 18.5):
